@@ -1,0 +1,13 @@
+@mixin flex_display ($direction: row, $alignment: center){
+    display: flex;
+    justify-content: $alignment;
+    flex-direction: $direction;
+    align-items: center;
+}
+
+@mixin links ($decoration: none, $font-size: 25px, $color: white){
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: $decoration;
+    font-size: $font-size;
+    color: $color;
+}
