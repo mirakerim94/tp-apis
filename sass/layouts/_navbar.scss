@@ -1,0 +1,23 @@
+.navbar{
+width: 90%;
+padding: 2em;
+.navbar--links{
+    margin-right: 1em;
+    @include links ($decoration: none, $font-size: 18px, $color: white);
+    font-family: 'Radio Canada', sans-serif;
+}
+.navbar--links:hover{
+    border-bottom: 0.5px solid white;
+    margin-right: 1em;
+}
+.create-jobs{
+    border: 1px solid white;
+    border-radius: 1em;
+    padding: 0.4em;
+    font-family: 'Macondo', cursive;
+}
+.create-jobs:hover{
+    border: 1px solid green;
+    padding: 0.4em;
+}
+}

@@ -1,0 +1,21 @@
+.footer-jobs{
+    width: $width--header-and-footer;
+    border: 1 px solid orange;
+    background-color: $background-color;
+    color:$color;
+    height: 80px;
+    @include flex_display ($direction: row, $alignment: center);
+    .footer--p{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+    }
+    p{
+        font-size: 20px;
+        font-family: 'Satisfy', cursive;
+        i{
+            margin-right: 0.5em;
+            font-size: 23px;
+        }
+    }
+}
