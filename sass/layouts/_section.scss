@@ -1,0 +1,36 @@
+#info-jobs{
+    width: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   margin: 2em 0em;
+   
+   .box{
+       width: 30%;
+       border:3px solid black;
+       margin: 1em;
+       padding: 0.5em;
+       border-radius: 10px;
+       text-align: center;
+       background-color: rgb(141, 218, 141);
+
+   }
+}
+.form{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    margin: 1.5em;
+    .buttons-form{
+        margin-left: 1em;
+        display:flex;
+        justify-content: center;
+    }
+}
+.div-spinner{
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    display: none;
+    justify-content: center;
+}
