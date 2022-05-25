@@ -1,5 +1,5 @@
 .header_jobs{
    width: $width--header-and-footer;
-   background-color: blue;
+   background-color: $background-color;
    @include flex_display ($direction: row, $alignment: left);
 }

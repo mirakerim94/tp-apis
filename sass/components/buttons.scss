@@ -1,0 +1,42 @@
+.btn-info{
+    margin-top: 1em;
+    background-color: rgb(93, 93, 216);
+    border-radius: 1em;
+    padding: 0.4em;
+    cursor: pointer;
+    
+}
+.btn-info:hover{
+        border:rgb(93, 93, 216);
+        color: whitesmoke;
+        padding:0.4em;
+        border-radius: 1em;
+        margin-top: 1em;
+    }
+#btn--search{
+    padding: 0.5em;
+    border-radius: 2em;
+    background-color: blue;
+    cursor: pointer;
+}  
+#btn--clear{
+    margin-left: 1em;
+    padding: 0.5em;
+    border-radius: 2em;
+    background-color: rgb(205, 137, 36);
+    cursor: pointer;
+}
+.btn-edit , .btn-delete {
+    padding: 0.6em;
+    border-radius: 1em;
+    font-weight: bolder;
+    margin-top: 0.5em;
+    cursor: pointer;
+}
+.btn-delete{
+    background-color: rgb(199, 57, 57)
+}
+
+.btn-edit{
+   background-color: rgb(41, 107, 41)
+}

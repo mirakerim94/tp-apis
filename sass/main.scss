@@ -3,4 +3,10 @@
 @import "base/_reset";
 @import "layouts/_header";
 @import "layouts/_navbar";
-@import "layouts/footer.scss";
+@import "layouts/footer";
+@import "layouts/section";
+@import "layouts/body";
+@import "components/buttons.scss";
+@import "base/typography";
+@import "layouts/selects";
+@import "components/spinner";

@@ -42,7 +42,6 @@
 
 .footer-jobs {
   width: 100%;
-  border: 1 px solid orange;
   background-color: black;
   color: white;
   height: 80px;
@@ -63,6 +62,134 @@
 .footer-jobs p i {
   margin-right: 0.5em;
   font-size: 23px;
+}
+
+#info-jobs {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 2em 0em;
+}
+#info-jobs .box {
+  width: 30%;
+  border: 3px solid black;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(141, 218, 141);
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 1.5em;
+}
+.form .buttons-form {
+  margin-left: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.div-spinner {
+  width: 100%;
+  min-height: 100vh;
+  justify-content: center;
+  display: none;
+  justify-content: center;
+}
+
+body {
+  background-color: rgb(250, 255, 207);
+}
+
+.btn-info {
+  margin-top: 1em;
+  background-color: rgb(93, 93, 216);
+  border-radius: 1em;
+  padding: 0.4em;
+  cursor: pointer;
+}
+
+.btn-info:hover {
+  border: rgb(93, 93, 216);
+  color: whitesmoke;
+  padding: 0.4em;
+  border-radius: 1em;
+  margin-top: 1em;
+}
+
+#btn--search {
+  padding: 0.5em;
+  border-radius: 2em;
+  background-color: blue;
+  cursor: pointer;
+}
+
+#btn--clear {
+  margin-left: 1em;
+  padding: 0.5em;
+  border-radius: 2em;
+  background-color: rgb(205, 137, 36);
+  cursor: pointer;
+}
+
+.btn-edit, .btn-delete {
+  padding: 0.6em;
+  border-radius: 1em;
+  font-weight: bolder;
+  margin-top: 0.5em;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: rgb(199, 57, 57);
+}
+
+.btn-edit {
+  background-color: rgb(41, 107, 41);
+}
+
+h2 {
+  font-family: "Bebas Neue", cursive;
+}
+
+p, span {
+  font-family: "Indie Flower", cursive;
+}
+
+span {
+  font-weight: bolder;
+}
+
+.select-forms {
+  padding: 0.5em;
+  border-radius: 0.8em;
+  margin: 0.5em;
+  background-color: rgb(158, 96, 158);
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  display: none;
+  animation: spin 1s ease infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
