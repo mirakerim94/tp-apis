@@ -40,3 +40,19 @@
 .btn-edit{
    background-color: rgb(41, 107, 41)
 }
+#alert-delete-forsure, #alert-cancel{
+    padding: 0.6em;
+    ;
+    border-radius: 1em;
+    cursor: pointer;
+    margin-right: 1em;
+}
+
+#alert-delete-forsure{
+    background-color: red;
+    color: white;
+}
+#alert-cancel{
+    background-color: whitesmoke;
+    color:black;
+}
