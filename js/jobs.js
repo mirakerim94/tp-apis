@@ -61,15 +61,41 @@ const createMoreDetails = (data) => {
     <p><span>Category</span>: ${category}</p>
     <p><span>Seniority</span>: ${seniority}</p>
     <button class="btn-edit" onclick = "editUser(${id})">Edit info</button>
-    <button class="btn-delete" onclick = "deleteUser(${id})">Delete Job</button>
+    <button class="btn-delete" onclick = "deleteJob(${id})">Delete Job</button>
     </div>
     `
     queryId("info-jobs").innerHTML = html
 }
 
-const deleteJobs = (id) => {
-    queryId()
+queryId("alert-delete").style.display = "none"
+queryId("overlay").style.display = "none"
+
+const deleteJob = (id) => {
+    queryId("alert-delete").style.display = "flex"
+    queryId("overlay").style.display = "flex"
+
+    queryId("alert-delete-forsure").addEventListener("click", (e) => {
+        e.preventDefault()
+
+        fetch(`${URLBase}${endpointJobs}${id}` , {
+            method: "DELETE",
+        })
+    .then(res => res)
+    .finally(() => {
+        window.location.reload()
+    })
+    queryId("alert-delete").style.display = "none"
+    queryId("overlay").style.display = "none"
+
+    })
 }
+
+queryId("alert-cancel").addEventListener("click", () => {
+    queryId("alert-delete").style.display = "none"
+    queryId("overlay").style.display = "none"
+})
+
+
 
 
 
