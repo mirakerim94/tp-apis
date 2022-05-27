@@ -18,10 +18,40 @@
         <ul>
             <a href="#" class="navbar--links">Careers</a>
             <a href="index.html" class="navbar--links">Home</a>
-            <a href="#" class="navbar--links create-jobs">Create Job</a>
         </ul>
+        <button class="navbar-btn create-jobs" id="create-jobs-id">Create Job</button>
     </nav>
     </header>
+
+    <section class="form-create form-style" id="form-create">
+        <form id="form--createjob">
+        <label>Job Title</label>
+        <input type="text" required id="create-title">
+        <label>Description</label>
+        <textarea name="text" rows="10" required id="create-description"></textarea>
+        <label>Tags</label>
+        <input type="text" required placeholder="Location" id="create-location" class="inputs">
+        <input type="text" required placeholder="Seniority" id="create-seniority" class="inputs">
+        <input type="text" required placeholder="Category" id="create-category" class="inputs">
+        <input type="submit" name="submit" value="Submit" id="create-submit">
+        </form>
+    </section>
+
+    <section class="form-edit form-style" id="form-edit">
+        <form id="form--editjob">
+        <label>Job Title</label>
+        <input type="text" required id="edit-title">
+        <label>Description</label>
+        <textarea name="text" rows="10" required id="edit-description"></textarea>
+        <label>Tags</label>
+        <input type="text" required placeholder="Location" id="edit-location" class="inputs">
+        <input type="text" required placeholder="Seniority" id="edit-seniority" class="inputs">
+        <input type="text" required placeholder="Category" id="edit-category" class="inputs">
+        <input type="submit" name="submit" value="Edit Job" id="edit-submit">
+        </form>
+    </section>
+
+
     <section class="form">
     <select id="select--location" class="select-forms">
         <option value="location">Location</option>

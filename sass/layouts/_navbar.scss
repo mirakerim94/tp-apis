@@ -1,6 +1,8 @@
 .navbar{
 width: 90%;
 padding: 2em;
+display: flex;
+flex-direction: row;
 .navbar--links{
     margin-right: 1em;
     @include links ($decoration: none, $font-size: 18px, $color: white);
@@ -15,9 +17,14 @@ padding: 2em;
     border-radius: 1em;
     padding: 0.4em;
     font-family: 'Macondo', cursive;
+    cursor: pointer;
 }
 .create-jobs:hover{
-    border: 1px solid green;
+    border: 2px solid green;
     padding: 0.4em;
+}
+
+@media only screen and (max-width: 700px){
+display:flex;
 }
 }
