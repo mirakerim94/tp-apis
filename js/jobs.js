@@ -60,7 +60,7 @@ const createMoreDetails = (data) => {
     <p><span>Location</span>: ${location}</p>
     <p><span>Category</span>: ${category}</p>
     <p><span>Seniority</span>: ${seniority}</p>
-    <button class="btn-edit" onclick = "editUser(${id})">Edit info</button>
+    <button class="btn-edit" onclick = "editJob(${id})">Edit info</button>
     <button class="btn-delete" onclick = "deleteJob(${id})">Delete Job</button>
     </div>
     `
@@ -95,7 +95,100 @@ queryId("alert-cancel").addEventListener("click", () => {
     queryId("overlay").style.display = "none"
 })
 
+/* CREATE JOB */
+queryId("form-create").style.display = "none"
+queryId("create-jobs-id").addEventListener("click", () =>{
+    queryId("form-create").style.display = "block"
+    queryId("overlay").style.display = "block"
+})
 
 
+queryId("form--createjob").onsubmit = (e) => {
+    e.preventDefault()
+    queryId("spinner").style.display = "block"
+    queryId("div-spinner").style.display = "flex"
+    const createNewJob = {
+        name: queryId("create-title").value,
+        description: queryId("create-description").value, 
+        location: queryId("create-location").value, 
+        seniority: queryId("create-seniority").value, 
+        category: queryId("create-category").value,
+    }
 
+    fetch(`${URLBase}${endpointJobs}`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'Application/json',
+        },
+        body: JSON.stringify(createNewJob)
+      })
+        .catch((err) => console.log(err))
+        .finally(() => {
+            queryId("form-create").style.display = "none"
+            queryId("overlay").style.display = "none"
+            setTimeout(() => {
+                window.location.reload()
+              }, 2000) 
+        })
+}
 
+/* EDIT JOB */
+queryId("form-edit").style.display = "none"
+
+let idEdit = null
+
+const editJob = (id) => {
+    queryId("form-edit").style.display = "block"
+    queryId("overlay").style.display = "block"
+
+    fetch(`${URLBase}${endpointJobs}${id}`)
+        .then((res) => res.json())
+        .then((data) => {
+          infoEditForm(data)
+          idEdit = id
+        })
+        .catch((err) => console.log(err))
+        .finally(() => {
+          console.log(idEdit)
+        })
+}
+
+const infoEditForm = (data) => {
+    const {name, description, location, seniority, category} = data
+
+    queryId("edit-title").value = name
+    queryId("edit-description").value = description
+    queryId("edit-location").value = location
+    queryId("edit-seniority").value = seniority
+    queryId("edit-category").value = category
+
+}
+
+queryId("form--editjob").onsubmit = (e) => {
+    e.preventDefault()
+    queryId("spinner").style.display = "block"
+    queryId("div-spinner").style.display = "flex"
+    const editedJob = {
+        name: queryId("edit-title").value,
+        description: queryId("edit-description").value,
+        location: queryId("edit-location").value,
+        seniority: queryId("edit-seniority").value,
+        category: queryId("edit-category").value
+      }
+
+      fetch(`${URLBase}${endpointJobs}${idEdit}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'Application/json',
+        },
+        body: JSON.stringify(editedJob)
+      })
+        .catch((err) => console.log(err))
+        .finally(() => {
+            queryId("form-edit").style.display = "none"
+            queryId("overlay").style.display = "none"
+          setTimeout(() => {
+            window.location.reload()
+          }, 2000)
+        })
+}

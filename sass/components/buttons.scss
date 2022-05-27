@@ -56,3 +56,21 @@
     background-color: whitesmoke;
     color:black;
 }
+
+#create-submit, #edit-submit{
+    width: 100px;
+    margin-top: 1em;
+    cursor: pointer;
+    
+    border-radius: 1em;
+    padding: 0.5em;
+    font-weight: bolder;
+}
+#create-submit{
+    background-color: rgb(86, 86, 198);
+    border: 1px solid rgb(86, 86, 198);
+}
+#edit-submit{
+    background-color: rgb(83, 183, 83);
+    border: 1px solid rgb(83, 183, 83);
+}

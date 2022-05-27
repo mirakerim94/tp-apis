@@ -34,3 +34,21 @@
     display: none;
     justify-content: center;
 }
+
+.form-style{
+    top: 15%;
+   left: 25%;
+    width: 50%;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid black;
+    position: fixed;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: beige;
+  z-index: 20;
+  border-radius: 1em;
+  overflow: hidden;
+  padding: 1.5em;
+  background-color: rgb(198, 198, 198);
+}

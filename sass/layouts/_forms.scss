@@ -1,0 +1,10 @@
+#form--createjob, #form--editjob{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: bolder;
+    .inputs{
+        margin-bottom: 1em;
+    }
+}
