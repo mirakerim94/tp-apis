@@ -6,12 +6,18 @@
    
    .box{
        width: 30%;
+       height: 300px;
        border:3px solid black;
        margin: 1em;
        padding: 0.5em;
        border-radius: 10px;
        text-align: center;
        background-color: rgb(141, 218, 141);
+       .p-description{
+       max-height: 135px;
+       overflow: hidden;
+   }
+  
        @media screen and (max-width: 980px){
 width: 45%;
        }
@@ -19,8 +25,18 @@ width: 45%;
    @media screen and (max-width: 640px){
        width: 90%;
    }
+   
+} 
 }
+.box-moredetail{
+    height: auto  !important;
+ .p-moredetail{
+       height: auto !important;
+       overflow:visible;
+   }   
 }
+
+
 .form{
     width: 100%;
     display:flex;
@@ -72,6 +88,10 @@ width: 45%;
   overflow: hidden;
   padding: 1.5em;
   background-color: rgb(198, 198, 198);
+  @media screen and (max-width: 700px){
+width: 90%;
+left:5% ;
+  }
 }
 
 .section-footervh{

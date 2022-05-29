@@ -7,7 +7,7 @@
     cursor: pointer;
 }
 .create-jobs:hover{
-    border: 2px solid green;
+    outline: 2px solid green;
     background-color: black;
     color: white;
     padding: 0.6em;
@@ -58,7 +58,7 @@
 .btn-edit{
    background-color: rgb(41, 107, 41)
 }
-#alert-delete-forsure, #alert-cancel{
+#alert-delete-forsure, .btn-cancel{
     padding: 0.6em;
     ;
     border-radius: 1em;
@@ -69,10 +69,16 @@
 #alert-delete-forsure{
     background-color: red;
     color: white;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
 }
-#alert-cancel{
-    background-color: whitesmoke;
-    color:black;
+.btn-cancel{
+    background-color: black;
+    color:white;
+    display: inline-block;
+    margin-top: .5rem;
+    padding-left: 1.7rem;
+    padding-right: 1.7rem;
 }
 
 #create-submit, #edit-submit{

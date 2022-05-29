@@ -3,6 +3,7 @@
     background-color: $background-color;
     color:$color;
     height: 80px;
+    margin-top: 5vh;
     @include flex_display ($direction: row, $alignment: center);
     .footer--p{
         width: 40%;
