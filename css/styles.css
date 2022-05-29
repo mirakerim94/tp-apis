@@ -44,6 +44,7 @@
   background-color: black;
   color: white;
   height: 80px;
+  margin-top: 5vh;
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -71,12 +72,17 @@
 }
 #info-jobs .box {
   width: 30%;
+  height: 300px;
   border: 3px solid black;
   margin: 1em;
   padding: 0.5em;
   border-radius: 10px;
   text-align: center;
   background-color: rgb(141, 218, 141);
+}
+#info-jobs .box .p-description {
+  max-height: 135px;
+  overflow: hidden;
 }
 @media screen and (max-width: 980px) {
   #info-jobs .box {
@@ -87,6 +93,14 @@
   #info-jobs .box {
     width: 90%;
   }
+}
+
+.box-moredetail {
+  height: auto !important;
+}
+.box-moredetail .p-moredetail {
+  height: auto !important;
+  overflow: visible;
 }
 
 .form {
@@ -146,6 +160,12 @@
   padding: 1.5em;
   background-color: rgb(198, 198, 198);
 }
+@media screen and (max-width: 700px) {
+  .form-style {
+    width: 90%;
+    left: 5%;
+  }
+}
 
 .section-footervh {
   width: 100%;
@@ -168,7 +188,7 @@ body {
 }
 
 .create-jobs:hover {
-  border: 2px solid green;
+  outline: 2px solid green;
   background-color: black;
   color: white;
   padding: 0.6em;
@@ -225,7 +245,7 @@ body {
   background-color: rgb(41, 107, 41);
 }
 
-#alert-delete-forsure, #alert-cancel {
+#alert-delete-forsure, .btn-cancel {
   padding: 0.6em;
   border-radius: 1em;
   cursor: pointer;
@@ -235,11 +255,17 @@ body {
 #alert-delete-forsure {
   background-color: red;
   color: white;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
 }
 
-#alert-cancel {
-  background-color: whitesmoke;
-  color: black;
+.btn-cancel {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding-left: 1.7rem;
+  padding-right: 1.7rem;
 }
 
 #create-submit, #edit-submit {
@@ -344,8 +370,11 @@ h3 {
   text-align: center;
   font-weight: bolder;
 }
-#form--createjob .inputs, #form--editjob .inputs {
+#form--createjob input, #form--editjob input {
   margin-bottom: 1em;
+  padding: 0.5rem;
+  border-radius: 8px;
+  border: none;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -4,7 +4,10 @@
     flex-direction: column;
     text-align: center;
     font-weight: bolder;
-    .inputs{
+    input{
         margin-bottom: 1em;
+        padding: .5rem;
+        border-radius: 8px;
+        border: none;
     }
 }

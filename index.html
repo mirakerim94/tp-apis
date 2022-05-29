@@ -47,7 +47,11 @@
             <input type="text" required placeholder="Location" id="create-location" class="inputs">
             <input type="text" required placeholder="Seniority" id="create-seniority" class="inputs">
             <input type="text" required placeholder="Category" id="create-category" class="inputs">
-            <input type="submit" name="submit" value="Submit" id="create-submit">
+            <div>
+                <input type="submit" name="submit" 
+                value="Submit" id="create-submit">
+                <button class="btn-cancel">Cancel</button>
+            </div>
         </form>
     </section>
 
@@ -61,7 +65,10 @@
             <input type="text" required placeholder="Location" id="edit-location" class="inputs">
             <input type="text" required placeholder="Seniority" id="edit-seniority" class="inputs">
             <input type="text" required placeholder="Category" id="edit-category" class="inputs">
-            <input type="submit" name="submit" value="Edit Job" id="edit-submit">
+            <div>
+                <input type="submit" name="submit" value="Edit Job" id="edit-submit">
+                <button class="btn-cancel">Cancel</button>
+            </div>
         </form>
     </section>
 
@@ -95,8 +102,10 @@
 
     <div class="alert-delete" id="alert-delete">
         <h3>Are you sure you want to delete it?</h3>
-        <button id="alert-delete-forsure">Delete</button>
-        <button id="alert-cancel">Cancel</button>
+        <div>
+            <button id="alert-delete-forsure">Delete</button>
+            <button class="btn-cancel" id="alert-cancel">Cancel</button>
+        </div>
     </div>
     <div id="overlay"></div>
     <footer class="footer-jobs">

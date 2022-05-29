@@ -29,7 +29,7 @@ const createCards = (data) => {
         return acc += `
         <div class="box">
         <h2>${name}</h2>
-        <p>${description}</p>
+        <p class="p-description">${description}</p>
         <p><span>Location</span>: ${location}</p>
         <p><span>Category</span>: ${category}</p>
         <p><span>Seniority</span>: ${seniority}</p>
@@ -63,9 +63,9 @@ const createMoreDetails = (data) => {
     const { name, description, location, category, seniority, id } = data
 
     const html = `
-    <div class="box">
+    <div class="box box-moredetail">
     <h2>${name}</h2>
-    <p>${description}</p>
+    <p class="p-moredetail">${description}</p>
     <p><span>Location</span>: ${location}</p>
     <p><span>Category</span>: ${category}</p>
     <p><span>Seniority</span>: ${seniority}</p>
@@ -105,6 +105,16 @@ queryId("alert-cancel").addEventListener("click", () => {
     queryId("alert-delete").style.display = "none"
     queryId("overlay").style.display = "none"
 })
+
+/* BUTTON CANCEL */
+const buttonsCancel = document.querySelectorAll('.btn-cancel')
+
+buttonsCancel.forEach(button=>{
+    button.addEventListener('click', ()=>{
+        window.location.reload()
+    })
+})
+
 
 /* CREATE JOB */
 queryId("form-create").style.display = "none"
@@ -218,11 +228,13 @@ const fillSelectOptionsLocation = () => {
         return array.indexOf(value) === index;
     })
 
-    const htmlLocation = locationFiltered.reduce((acc, curr) => {
+    let htmlLocation = locationFiltered.reduce((acc, curr) => {
         return acc += `
         <option value='${curr}'>${curr}</option>
         `
     }, `<option value='all' selected hidden>Location</option>`)
+
+    htmlLocation += `<option value='all'>All</option>`
 
     queryId("select--location").innerHTML = htmlLocation
 }
@@ -243,12 +255,13 @@ const fillSelectOptionsSeniority = () => {
     });
 
 
-    const htmlSeniorityFiltered = seniorityFiltered.reduce((acc, curr) => {
+    let htmlSeniorityFiltered = seniorityFiltered.reduce((acc, curr) => {
 
         return acc += `
         <option value='${curr}'>${curr}</option>
         `
     }, `<option value='all' selected hidden>Seniority</option>`)
+    htmlSeniorityFiltered += `<option value='all'>All</option>`
 
     queryId("select--seniority").innerHTML = htmlSeniorityFiltered
 }
@@ -264,35 +277,73 @@ const fillSelectOptionsCategory = () => {
         return array.indexOf(value) === index;
     })
 
-    const htmlCategory = categoryFiltered.reduce((acc, curr) => {
+    let htmlCategory = categoryFiltered.reduce((acc, curr) => {
         return acc += `
         <option value='${curr}'>${curr}</option>
         `
     }, `<option value='all' selected hidden>Category</option>`)
+    htmlCategory += `<option value='all'>All</option>`
+
 
     queryId("select--category").innerHTML = htmlCategory
 
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // fillSelectOptions()
 
-/*queryId('btn--search').addEventListener('click', () => {
+queryId('btn--search').addEventListener('click', () => {
     const location = queryId('select--location').value
     const seniority = queryId('select--seniority').value
     const category = queryId('select--category').value
 
-})*/
+
+    const location_filtered = arrjobs.filter(job =>{
+        if(location === 'all'){
+            return job
+        } else {
+            return location === job.location
+        }
+    })
+
+    const location_seniority_filtered = location_filtered.filter(job =>{
+        if(seniority === 'all'){
+            return job
+        } else if(seniority === 'No seniority'){
+            return '' === job.seniority
+        } else {
+            return seniority === job.seniority
+        }
+    })
+
+    const location_seniority_category_filtered = location_seniority_filtered.filter(job =>{
+        if(category === 'all'){
+            return job
+        } else {
+            return category === job.category
+        }
+    })
+
+    createCards(location_seniority_category_filtered)
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CLEAR FORM SEARCH */
+queryId("btn--clear").addEventListener("click", () => {
+    window.location.reload()
+})
