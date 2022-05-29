@@ -1,77 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Jobs</title>
-        <link rel="shortcut icon" type="image-png" href="img/favicon.ico">
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="css/styles.css" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Macondo&family=Poppins:wght@200&family=Redressed&family=Shizuru&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Macondo&family=Poppins:wght@200&family=Radio+Canada&family=Redressed&family=Shizuru&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Macondo&family=Poppins:wght@200&family=Radio+Canada&family=Redressed&family=Satisfy&family=Shizuru&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bebas+Neue&family=Macondo&family=Poppins:wght@200&family=Radio+Canada&family=Redressed&family=Satisfy&family=Shizuru&display=swap" rel="stylesheet">
-    </head>
-    <body>
+
+<head>
+    <title>Jobs</title>
+    <link rel="shortcut icon" type="image-png" href="img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Macondo&family=Poppins:wght@200&family=Redressed&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Macondo&family=Poppins:wght@200&family=Radio+Canada&family=Redressed&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Macondo&family=Poppins:wght@200&family=Radio+Canada&family=Redressed&family=Satisfy&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Bebas+Neue&family=Macondo&family=Poppins:wght@200&family=Radio+Canada&family=Redressed&family=Satisfy&family=Shizuru&display=swap"
+        rel="stylesheet">
+    <script src="jsmcapi/js.js"></script>
+
+</head>
+
+<body>
     <header class="header_jobs">
         <nav class="navbar">
-        <ul>
-            <a href="#" class="navbar--links">Careers</a>
-            <a href="index.html" class="navbar--links">Home</a>
-        </ul>
-        <button class="navbar-btn create-jobs" id="create-jobs-id">Create Job</button>
-    </nav>
+            <ul>
+                <a href="#" class="navbar--links">Careers</a>
+                <a href="index.html" class="navbar--links">Home</a>
+                <button class="navbar-btn create-jobs" id="create-jobs-id">Create Job</button>
+            </ul>
+            
+        </nav>
     </header>
 
     <section class="form-create form-style" id="form-create">
         <form id="form--createjob">
-        <label>Job Title</label>
-        <input type="text" required id="create-title">
-        <label>Description</label>
-        <textarea name="text" rows="10" required id="create-description"></textarea>
-        <label>Tags</label>
-        <input type="text" required placeholder="Location" id="create-location" class="inputs">
-        <input type="text" required placeholder="Seniority" id="create-seniority" class="inputs">
-        <input type="text" required placeholder="Category" id="create-category" class="inputs">
-        <input type="submit" name="submit" value="Submit" id="create-submit">
+            <label>Job Title</label>
+            <input type="text" required id="create-title">
+            <label>Description</label>
+            <textarea name="text" rows="10" required id="create-description"></textarea>
+            <label>Tags</label>
+            <input type="text" required placeholder="Location" id="create-location" class="inputs">
+            <input type="text" required placeholder="Seniority" id="create-seniority" class="inputs">
+            <input type="text" required placeholder="Category" id="create-category" class="inputs">
+            <input type="submit" name="submit" value="Submit" id="create-submit">
         </form>
     </section>
 
     <section class="form-edit form-style" id="form-edit">
         <form id="form--editjob">
-        <label>Job Title</label>
-        <input type="text" required id="edit-title">
-        <label>Description</label>
-        <textarea name="text" rows="10" required id="edit-description"></textarea>
-        <label>Tags</label>
-        <input type="text" required placeholder="Location" id="edit-location" class="inputs">
-        <input type="text" required placeholder="Seniority" id="edit-seniority" class="inputs">
-        <input type="text" required placeholder="Category" id="edit-category" class="inputs">
-        <input type="submit" name="submit" value="Edit Job" id="edit-submit">
+            <label>Job Title</label>
+            <input type="text" required id="edit-title">
+            <label>Description</label>
+            <textarea name="text" rows="10" required id="edit-description"></textarea>
+            <label>Tags</label>
+            <input type="text" required placeholder="Location" id="edit-location" class="inputs">
+            <input type="text" required placeholder="Seniority" id="edit-seniority" class="inputs">
+            <input type="text" required placeholder="Category" id="edit-category" class="inputs">
+            <input type="submit" name="submit" value="Edit Job" id="edit-submit">
         </form>
     </section>
 
 
     <section class="form">
-    <select id="select--location" class="select-forms">
-        <option value="location">Location</option>
-    </select>
-    <select id="select--seniority" class="select-forms">
-        <option value="seniority">Seniority</option>
-    </select>
-        <select id="select--category" class="select-forms">
-            <option value="select--category">Category</option>
-        </select>
-        
-    
-        <div class="buttons-form">
-        <button id="btn--search">Search</button>
-    
-        <button id="btn--clear">Clear</button>
-    </div>
+        <div class="selects--search">
+            <select id="select--location" class="select-forms">
+                <option value="location">Location</option>
+            </select>
+            <select id="select--seniority" class="select-forms">
+                <option value="seniority">Seniority</option>
+            </select>
+            <select id="select--category" class="select-forms">
+                <option value="select--category">Category</option>
+            </select>
+            <div class="btn--searchandclear">
+                <button id="btn--search">Search</button>
+
+                <button id="btn--clear">Clear</button>
+            </div>
+        </div>
     </section>
 
-    <section class="div-spinner" id="div-spinner"><div class="spinner" id="spinner"></div></section>
+    <section class="div-spinner" id="div-spinner">
+        <div class="spinner" id="spinner"></div>
+    </section>
 
     <section id="info-jobs">
 
@@ -84,8 +100,11 @@
     </div>
     <div id="overlay"></div>
     <footer class="footer-jobs">
-        <div class="footer--p"><p><i class="fas fa-jedi"></i> Made by Mira Kerimkulova</p></div>
+        <div class="footer--p">
+            <p><i class="fas fa-jedi"></i> Made by Mira Kerimkulova</p>
+        </div>
     </footer>
     <script src="js/jobs.js"></script>
-    </body>
+</body>
+
 </html>

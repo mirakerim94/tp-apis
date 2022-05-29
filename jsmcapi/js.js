@@ -1,4 +1,4 @@
-let jobs = [
+let job = [
     {
      "name": "Cloud Platform Architect",
      "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo nam veniam dignissimos unde, eveniet doloremque inventore quis, qui doloribus eum suscipit totam tempore dolor, repellendus laboriosam reiciendis cupiditate? Esse, cum!",
